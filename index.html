@@ -2,6 +2,9 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!--font awesome-->
+ <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
+ 
 <style>
 * {
   box-sizing: border-box;
@@ -79,6 +82,14 @@ html {
   padding: 15px;
   width: 100%;
 }
+
+.footer p{
+  color:#ffffff;
+  
+}
+.footer .year{
+  color: #070807;
+}
 .ui{
 	background-color: #0099cc;
   color: #ffffff;
@@ -131,13 +142,13 @@ html {
 
   <section>
 		<div class="ui">
-				<a href="uipicker.html"><h1>UI colour picker</h1> </a>
+      <i class="fab fa-uikit fa-3x"></i> 	<a href="uipicker.html" style="color: #373a40;">  <h1>UI colour picker</h1> </a>
 			</div>
   </section>
 
   <div class="r">
 		<div class="col-5 col-s-5 menu">
-		  <h2>hope you like it. </h2>
+		  <h2>Hope you like it. </h2>
 	  
 		</div>
 
@@ -155,9 +166,9 @@ html {
 </div>
 
 <div class="footer">
-		<p><center>&copy; 2019<br/>
-	<a href="#">Terms of service</a></p>
-  <p>you have reached the end of the page</p>
+		<p style="text-align: center; font-size: 1.2rem;">&copy; <script > document.write(new Date().getFullYear())</script> 
+	<a href="termsofservice.html" style="color: #ffffff; font-size: 1rem;">Terms of service</a></p>
+  <p > You have reached the end of the page</p>
 </div>
 
 </body>
