@@ -131,6 +131,10 @@ header li {
   border-left: 1px solid black;
 }
 
+.exitButton {
+  display: none;
+}
+
 .palettes {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -243,7 +247,7 @@ header li {
   }
 
   .colorFormat {
-    /* margin-top: 2%; */
+    margin-top: 0;
   }
 
   .dropdown {
@@ -405,7 +409,7 @@ header li {
     display: none !important;
   }
 
-  .hamgurguerIMG {
+  .hamburguerIMG {
     display: none;
   }
 
