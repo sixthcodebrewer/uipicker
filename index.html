@@ -12,6 +12,11 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="styles.css" rel="stylesheet" type="text/css">
 	<link href="//fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,300" rel="stylesheet" type="text/css">
+	<style>
+		[hidden] {
+			display: none !important;
+		}
+	</style>
 	<noscript>
 		<style>
 			.format {
@@ -48,9 +53,9 @@
 
 		window.onload = function () {
 			// Make dropdown on Mobile start closed on load
-			document.getElementById('dropdown').style.display = "none";
+			document.getElementById('dropdown').hidden = true;
 			// Make exit button stay closed on load
-			document.getElementById('exit').style.display = "none";
+			document.getElementById('exit').hidden = true;
 			////
 			document.documentElement.className +=
 				(("ontouchstart" in document.documentElement) ?
@@ -116,14 +121,14 @@
 			let hamburguerIcon = document.getElementById('hamburguer');
 			let exitIcon = document.getElementById('exit');
 
-			if (dropdownList.style.display == "none") {
-				dropdownList.style.display = "block";
-				hamburguerIcon.style.display = "none";
-				exitIcon.style.display = "block";
+			if (dropdownList.hidden) {
+				dropdownList.hidden = false;
+				hamburguerIcon.hidden = true;
+				exitIcon.hidden = false;
 			} else {
-				dropdownList.style.display = "none";
-				exitIcon.style.display = "none";
-				hamburguerIcon.style.display = "block";
+				dropdownList.hidden = true;
+				exitIcon.hidden = true;
+				hamburguerIcon.hidden = false;
 			}
 		}
 
@@ -145,7 +150,7 @@
 			</div>
 			<!-- EXIT Button -->
 			<!-- Hamburguer Button -->
-			<div class="exitButton flex" id="exit" onclick="showHideDropdown()">
+			<div class="exitButton flex" id="exit" onclick="showHideDropdown()" hidden>
 				<div class="exitButtonIMG" style="display: flex; margin-top: 15%;">
 					<img src="img/exit.png" alt="Exit Icon">
 				</div>
@@ -166,7 +171,7 @@
 			</div>
 		</div>
 		<!-- MOBILE & IPAD MENU -->
-		<div class="colorSelectMobile flex" id="dropdown">
+		<div class="colorSelectMobile flex" id="dropdown" hidden>
 			<nav class="flex center index col">
 				<ul class="flex menu2">
 					<li class="flex hover"><a href="#flat" class="selected">Flat</a></li>
